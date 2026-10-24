@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eaf8ff"><title>Artashop Ez — ยินดีต้อนรับ</title>
+<style>
+:root{--blue:#168ed5;--deep:#126bb2;--sky:#74d9f7;--ink:#23445e;--muted:#7790a5;--line:#d8edf7}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:25px 15px;font-family:Tahoma,"Noto Sans Thai",sans-serif;color:var(--ink);background:radial-gradient(ellipse at 15% 15%,#d7f5ff 0,transparent 36%),radial-gradient(ellipse at 90% 90%,#d9eaff 0,transparent 38%),linear-gradient(135deg,#f8fdff,#e9f7ff);overflow-x:hidden}
+.blob{position:fixed;border-radius:50%;filter:blur(1px);opacity:.65;pointer-events:none}.b1{width:260px;height:260px;left:-100px;bottom:-90px;background:#b5eaff}.b2{width:210px;height:210px;right:-60px;top:-60px;background:#c7e9ff}
+.card{position:relative;width:min(100%,420px);padding:34px 32px 28px;border:1px solid #fff;border-radius:28px;background:#ffffffd9;box-shadow:0 24px 75px #3b8cbd20,0 2px 12px #4a9ac30d;backdrop-filter:blur(16px)}
+.logo{display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:25px}.logo-icon{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#6ccef1,#2586d1);color:white;font-size:24px;box-shadow:0 8px 18px #168ed533}.logo-name{font-size:25px;font-weight:900;letter-spacing:-.7px;color:#23445e}.logo-name span{color:#168ed5}
+.hello{text-align:center}.hello h1{font-size:25px;margin:0 0 7px}.hello p{font-size:13px;color:var(--muted);margin:0 0 24px;line-height:1.7}
+.tabs{display:grid;grid-template-columns:1fr 1fr;padding:4px;background:#edf7fc;border-radius:13px;margin-bottom:22px}.tab{border:0;border-radius:10px;padding:10px;background:transparent;color:#7790a5;font-weight:bold;cursor:pointer}.tab.active{background:white;color:#167fc2;box-shadow:0 3px 10px #2a80a311}
+label{display:block;font-size:12px;font-weight:bold;color:#466780;margin:14px 0 7px}.inputwrap{display:flex;align-items:center;gap:9px;border:1px solid var(--line);background:#fbfeff;border-radius:12px;padding:0 13px;transition:.2s}.inputwrap:focus-within{border-color:#69c9ef;box-shadow:0 0 0 3px #4fc3ed20}.inputwrap .ico{color:#78a8c6;font-size:16px}.inputwrap input{border:0;outline:0;background:transparent;width:100%;min-width:0;padding:13px 0;color:#23445e;font:inherit;font-size:13px}.inputwrap input::placeholder{color:#a3b6c5}.show{border:0;background:transparent;color:#6d9db9;cursor:pointer;padding:4px}
+.options{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11px;color:#7d95a8;margin:14px 0 18px}.remember{display:flex;align-items:center;gap:6px}.remember input{accent-color:#168ed5}.link{border:0;background:none;color:#168ed5;cursor:pointer;font-size:11px;padding:0}
+.submit{width:100%;border:0;border-radius:12px;padding:14px;background:linear-gradient(100deg,#54c9ed,#2386d2);color:white;font-weight:bold;font-size:14px;cursor:pointer;box-shadow:0 9px 19px #168ed52b;transition:.18s}.submit:hover{transform:translateY(-1px);filter:brightness(1.03)}.submit:disabled{opacity:.65;cursor:wait}
+.notice{font-size:12px;text-align:center;min-height:19px;margin:13px 0 0;color:#1481b8}.notice.error{color:#d65d77}
+.foot{text-align:center;font-size:11px;color:#91a8b8;margin-top:23px}.heart{color:#61bce5}
+.mini{position:fixed;top:-25px;left:var(--x);width:var(--s);height:var(--s);border-radius:30%;background:linear-gradient(135deg,#fff,#78d8f4,#4e9de2);box-shadow:0 0 12px #8bdff7;opacity:.7;transform:rotate(45deg);pointer-events:none;animation:fall var(--d) linear var(--delay) infinite}
+@keyframes fall{0%{transform:translateY(-5vh) rotate(45deg);opacity:0}15%{opacity:.7}100%{transform:translate(40px,110vh) rotate(400deg);opacity:0}}
+@media(max-width:420px){.card{padding:27px 21px 24px;border-radius:23px}.logo-name{font-size:23px}}
+@media(prefers-reduced-motion:reduce){.mini{display:none}*{transition:none!important}}
+</style></head>
+<body><div class="blob b1"></div><div class="blob b2"></div>
+<main class="card">
+  <div class="logo"><div class="logo-icon">☁</div><div class="logo-name">Artashop <span>Ez</span></div></div>
+  <div class="hello"><h1 id="heading">ยินดีต้อนรับกลับมา 💙</h1><p id="subheading">เข้าสู่ระบบเพื่อไปต่อกับ Artashop Ez<br>พื้นที่เล็ก ๆ สำหรับคนรัก LINE RANGERS</p></div>
+  <div class="tabs"><button class="tab active" id="loginTab" type="button">เข้าสู่ระบบ</button><button class="tab" id="registerTab" type="button">สมัครสมาชิก</button></div>
+  <form id="authForm">
+    <div id="usernameField" hidden><label for="username">ชื่อที่ใช้แสดง</label><div class="inputwrap"><span class="ico">☻</span><input id="username" name="username" autocomplete="nickname" placeholder="ชื่อเล่นของคุณ" minlength="2" maxlength="32"></div></div>
+    <label for="email">อีเมล</label><div class="inputwrap"><span class="ico">✉</span><input id="email" name="email" type="email" autocomplete="email" required maxlength="160" placeholder="you@example.com"></div>
+    <label for="password">รหัสผ่าน</label><div class="inputwrap"><span class="ico">♙</span><input id="password" name="password" type="password" autocomplete="current-password" required minlength="10" maxlength="72" placeholder="อย่างน้อย 10 ตัวอักษร"><button class="show" type="button" id="showPassword" aria-label="แสดงรหัสผ่าน">◉</button></div>
+    <div class="options" id="loginOptions"><label class="remember"><input type="checkbox" id="remember"> จดจำฉันบนอุปกรณ์นี้</label><button type="button" class="link" id="forgot">ลืมรหัสผ่าน?</button></div>
+    <button class="submit" id="submitBtn" type="submit">เข้าสู่ระบบ →</button>
+    <p class="notice" id="notice" role="status" aria-live="polite"></p>
+  </form>
+  <div class="foot">ทำด้วย <span class="heart">♥</span> เพื่อชุมชน Artashop Ez</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);let mode='login';
+function setMode(next){mode=next;const reg=mode==='register';$('loginTab').classList.toggle('active',!reg);$('registerTab').classList.toggle('active',reg);$('usernameField').hidden=!reg;$('username').required=reg;$('heading').textContent=reg?'สร้างบัญชีใหม่กัน 💙':'ยินดีต้อนรับกลับมา 💙';$('subheading').innerHTML=reg?'สมัครสมาชิกเพื่อเริ่มต้นใช้งาน Artashop Ez':'เข้าสู่ระบบเพื่อไปต่อกับ Artashop Ez<br>พื้นที่เล็ก ๆ สำหรับคนรัก LINE RANGERS';$('submitBtn').textContent=reg?'สมัครสมาชิก →':'เข้าสู่ระบบ →';$('password').autocomplete=reg?'new-password':'current-password';$('password').placeholder=reg?'อย่างน้อย 10 ตัวอักษร':'กรอกรหัสผ่านของคุณ';$('loginOptions').hidden=reg;clearNotice();}
+function clearNotice(){ $('notice').textContent='';$('notice').className='notice';}
+function notice(msg,error=false){$('notice').textContent=msg;$('notice').className='notice'+(error?' error':'');}
+$('loginTab').onclick=()=>setMode('login');$('registerTab').onclick=()=>setMode('register');
+$('showPassword').onclick=()=>{$('password').type=$('password').type==='password'?'text':'password';};
+$('forgot').onclick=()=>notice('กรุณาติดต่อผู้ดูแลระบบเพื่อขอรีเซ็ตรหัสผ่าน',true);
+$('authForm').addEventListener('submit',async e=>{e.preventDefault();clearNotice();const btn=$('submitBtn');btn.disabled=true;btn.textContent='กำลังดำเนินการ...';const body={email:$('email').value.trim(),password:$('password').value};if(mode==='register')body.username=$('username').value.trim();try{const r=await fetch('/api/'+(mode==='register'?'register':'login'),{method:'POST',headers:{'Content-Type':'application/json'},credentials:'same-origin',body:JSON.stringify(body)});const data=await r.json();if(!r.ok)throw new Error(data.error||'เกิดข้อผิดพลาด');notice(data.message||'สำเร็จ');if(data.user){setTimeout(()=>{if(data.user.role==='admin')location.href='/admin.html';else{notice('เข้าสู่ระบบสำเร็จ 💙 บัญชีของคุณพร้อมใช้งานแล้ว');btn.textContent='เข้าสู่ระบบแล้ว ✓';}},400);}}catch(err){notice(err.message||'เชื่อมต่อไม่ได้ กรุณาลองใหม่',true);}finally{btn.disabled=false;btn.textContent=mode==='register'?'สมัครสมาชิก →':'เข้าสู่ระบบ →';}});
+fetch('/api/me').then(r=>r.json()).then(d=>{if(d.user){notice('เข้าสู่ระบบแล้ว: '+d.user.username);if(d.user.role==='admin')notice('เข้าสู่ระบบผู้ดูแลแล้ว สามารถเปิด /admin.html ได้');}}).catch(()=>{});
+for(let i=0;i<15;i++){let m=document.createElement('i');m.className='mini';m.style.setProperty('--x',Math.random()*100+'vw');m.style.setProperty('--s',(3+Math.random()*5)+'px');m.style.setProperty('--d',(7+Math.random()*10)+'s');m.style.setProperty('--delay',(-Math.random()*15)+'s');document.body.appendChild(m);}
+</script></body></html>
